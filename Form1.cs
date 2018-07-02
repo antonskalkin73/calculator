@@ -5,12 +5,12 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
-        Calculator calculatorProcessor;
+        CalculatorBC.Calculator calculatorProcessor;
 
         public Form1()
         {
             InitializeComponent();
-            calculatorProcessor = new Calculator();
+            calculatorProcessor = new CalculatorBC.Calculator();
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -42,33 +42,5 @@ namespace Calculator
         }
     }
 
-    public class Calculator {
-        private long currentResult = 0;
-
-        public long GetResult() {
-            return currentResult;
-        }
-
-        public void add(long arg) {
-            //TODO: add test
-            currentResult += arg;
-        }
-
-        public void substract(long arg) {
-            //TODO: add test
-            currentResult -= arg;
-        }
-
-        public void multiply(long arg) {
-            //TODO: add test
-            //TODO: implement
-            currentResult *= arg;
-        }
-
-        public void divide(long arg) {
-            //TODO: add test
-            //TODO: implement
-            currentResult /= arg;
-        }
-    }
+    
 }
